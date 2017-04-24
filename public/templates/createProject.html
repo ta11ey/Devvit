@@ -1,0 +1,63 @@
+
+
+<div class="submitMyContent">
+	<div class="createLeft">
+		<p>Submit an Idea.</p>
+		<p>Find your help.</p>
+		<p>change the world.</p>
+		<div class="profile_globe">
+		<img src="media/globe2.png" alt="">
+	</div>
+	</div>
+	
+	<div class="createRight">
+		<div class="createDesc"><u>PICK FROM POPULAR CATEGORIES</u></div>
+		<div class="create_option">
+			<div class="create_categories_wrapper">
+				<div class="create_categories"ng-repeat = "categ in popCat" ng-click = "chooseCategory(categ)" ng-class="{pickedCat: selectedCategory(categ)}">
+					{{categ.toUpperCase()}}
+				</div>
+			</div>
+			<!--<div class="create_web" ng-click = 'typeValue("web")' ng-class = "{optionSelected: selectedWeb}">WEB</div>
+			
+			<div class="create_mobile" ng-click = 'typeValue("mobile")'ng-class = "{optionSelected : selectedMobile}">MOBILE</div>-->
+			<div class="createDesc"><u>OR MAKE YOUR OWN</u></div>
+			<input type="text" class = "create_cat" ng-model = "project.type"placeholder="Category...">
+		</div>
+		<div class="createDesc"><u>type?</u></div>
+		<div class="create_subOption">
+			<div ng-click = 'typeSubOption("personal")' ng-class = "{optionSelected: selectedpers}" class="subOption">PERSONAL</div>
+			<div ng-click = 'typeSubOption("professional")' ng-class = "{optionSelected: selectedprof}"class="subOption">PROFESSIONAL</div>
+			<div ng-click = 'typeSubOption("freelance")' ng-class = "{optionSelected: selectedfree}" class="subOption">FREELANCE</div>
+		</div>
+
+		<div class = "inputWrapper">
+			<input ng-model="project.name" type="text" class="create_projectName" placeholder="Title...">
+		</div>
+		<div class="createDesc"><u>Give us a short description to inspire people</u></div>
+		<div class="inputWrapper">
+			<textarea ng-model="project.description" class = "create_textarea"></textarea>
+		</div>
+		
+		<div class="displayTags" ng-repeat = "tag in tags track by $index">
+			<div class="displayedTag">
+			{{tag}}
+			<a ng-click="removeTag(tag)"><i  class="fa fa-times"></i></a>
+			</div>
+			
+			</div>
+			<br>
+			<div class="createDesc">
+			<u>Add some tags. <br>(it makes it easier to search for your project)</u>
+			</div>
+			<form ng-submit = "createATag(projectTag)">
+				<input type="text" class="createTags" id = "createTags" ng-model ="projectTag">
+			</form>
+		<br>
+
+
+
+<div class="buttonWrapper">
+	<button class = 'createButton' ng-click="createProject(project)">submit</button>
+</div>
+</div>

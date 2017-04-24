@@ -1,0 +1,53 @@
+
+
+<!--<div class="home_room_project" ng-model="mobileProjects" ng-repeat="mobileProject in mobileProjects | filter: projectFilter | orderBy: 'createdAt'">
+    <h2><span></span>{{mobileProject.name}}</h2>
+    <h4><span>Description: </span>{{mobileProject.description}}</h4>
+    
+    <div class="home_room_info">
+        <h4><span>Created At: </span>{{mobileProject.createdAt | date:'short'}}</h4>
+        <h4><span>By: </span>{{mobileProject.admins[0].basicInfo.firstName}}
+        {{mobileProject.admins[0].basicInfo.lastName}}</h4>
+    </div>
+    
+    <button class="apply" ng-click="submit = !submit">Apply</button>
+    <input class="applyMessage" type="text" value="Message Here" ng-model="submittedMessage" ng-show="submit"></input>
+    <button class="apply" ng-click="applyMobile(mobileProject._id, submittedMessage)" ng-show="submit">Submit</button>
+</div>-->
+
+<div class = 'cont'>
+	<div class = 'panel-container' ng-repeat = 'mobileProject in mobileProjects track by $index'>
+		<div class = 'panel mobile_panel'>
+			<div class = 'panel-flex-contain'>
+				<span class = 'panel_title mobile_title'>{{mobileProject.name}}</span>
+				<span class = 'panel_creator mobile_creator'>Created By: {{mobileProject.admins[0].basicInfo.firstName}} {{mobileProject.admins[0].basicInfo.lastName}}</span>
+				<span class = 'panel_date mobile_date'>Created On: {{mobileProject.createdAt | date:' MMM dd'}}</span>
+				<div class = 'panel_btn-contain'>
+					<apply-modal width='700px' height='60%'>
+      					<div class = 'panel-flex-contain-apply'>
+							<span class = 'panel_title mobile_title'>{{mobileProject.name}}</span>
+							<span class = 'panel_creator mobile_creator'>Created By: {{mobileProject.admins[0].basicInfo.firstName}} {{mobileProject.admins[0].basicInfo.lastName}}</span>
+							<span class = 'panel_date mobile_date'>{{mobileProject.createdAt | date: 'MMM dd'}}</span>
+						</div>
+					<hr>
+					<div class = 'message-apply-contain'>
+						<textarea class = 'apply-message' placeholder = 'Send {{mobileProject.admins[0].basicInfo.firstName}} a message letting them know why you would be a good fit for their project.'></textarea>
+					</div>
+					<div class ='submit-contain'>
+						<button class="panel_btn submit" ng-click="apply(mobileProject._id, submittedMessage)" >Submit</button>
+					</div>
+				  
+    		</apply-modal>
+					
+				</div>
+			</div>
+			<div class = 'panel-desc-contain'>
+				<p class = 'panel_desc' dd-text-collapse dd-text-collapse-max-length="110" dd-text-collapse-text="{{mobileProject.description}}">
+			</div>
+			<div class = 'contain-members'>
+				<span class = 'members'>{{mobileProjects[$index].members.length}} Applied</span>
+			</div>
+		</div>
+			
+	</div>
+</div>

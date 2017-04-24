@@ -1,0 +1,21 @@
+<div class="searchWrap">
+	<input id="searchUsers" type="text" placeholder="Search User..." ng-model="developerSearch"></input>
+	<button id="searchButton" ng-click="searchForDev(developerSearch)">Search</button>
+</div>
+
+<div class="messageComposeWrap">
+	<div class="message_developerCard" ng-repeat = "user in members track by $index" ng-show="!clickedDev">
+		<div class="messageCard_upper"></div>
+		<div class="messageCard_lower" ng-click="newMessageWithUser($index)">
+			{{user.basicInfo.first}}
+			{{user.basicInfo.last}}
+		<br>
+		{{user.basicInfo.userName}}	
+		</div>
+	</div>
+	<div class="composeNewMessage">
+		<h2 id="chosen-name" ng-show="clickedDev">New Message to {{chosenName}}</h2>
+		<textarea id="compose-new" cols="10" rows="10" ng-show="clickedDev" ng-model="newMsg"></textarea>
+	</div>
+	<button id="send-button" ng-show="clickedDev" ng-click="sendNewMessage(newMsg)", >Send</button>
+</div>

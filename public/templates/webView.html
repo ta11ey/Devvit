@@ -1,0 +1,112 @@
+
+<!--<<<<<<< HEAD
+<div class="home_room_project" ng-model="webProjects" ng-repeat="webProject in webProjects | filter: projectFilter | orderBy: 'createdAt' track by $index">
+    <h2><span></span>{{webProject.name}}</h2>
+    <h4><span>Description: </span>{{webProject.description}}</h4>
+    
+    <div class="home_room_info">
+        <h4><span>Created At: </span>{{webProject.createdAt | date:'short'}}</h4>
+        <h4><span>By: </span>{{webProject.admins[0].basicInfo.firstName}}
+        {{webProject.admins[0].basicInfo.lastName}}</h4>
+        {{webProjects[$index].members.length}}
+    </div>
+=======-->
+<div class="projects_nav">
+	<ul class = "projects_nav_list">
+		<li ng-click ="findAll()">ALL</li>
+		<li ng-click = "searchProjects('web')" >WEB</li>
+		<li ng-click = "searchProjects('mobile')" >MOBILE</li>
+		<li ng-click = "searchProjects('software')">SOFTWARE</li>
+		<li ng-click = "searchProjects('javascript')">JAVASCRIPT</li>
+		<li ng-click = "searchProjects('robotics')">ROBOTICS</li>
+		<LI ng-click = "searchProjects('angular')">ANGULAR</LI>
+	</ul>
+</div>
+
+<div class = 'cont_home'>
+	<div class="cont_left">
+		<form ng-submit = "searchProjects(searchQuery)">
+		<input ng-model="searchQuery" type="text" class="searchType" placeholder="Seach projects...">
+		</form>
+		<div class="sortBySubType">
+			I want to see...
+			<div class="sortSubTypeType">
+				<div ng-click = 'subTypeFilter = "freelance"' class="sortSub sortSubFree">FREELANCE</div>
+				<div ng-click = 'subTypeFilter = "personal"' class="sortSub sortSubPers">PERSONAL</div>
+				<div ng-click = 'subTypeFilter = "professional"'class="sortSub sortSubProf">PROFESSIONAL</div>
+				<div ng-click = 'subTypeFilter ="" 'class="sortSub sortSubProf">ALL</div>
+				
+			</div>
+		</div>
+		<div class="sortByDistance">
+			Within a...
+			<form >
+				<input type="text" class="searchDistance"  placeholder="10...">Mile radius</input>
+			</form>
+		</div>
+		<div class="sortByOption">
+			sort by:<select class = "sortBySelect" ng-model = "sortByOption" >
+				<option value="members">least applied</option>
+				<option value="-members">most applied</option>
+			</select>
+		</div>
+	</div>
+	<div class="cont_right">
+		<div class="panel_wrapper"ng-repeat = 'webProject in webProjects | filter:{ subType: subTypeFilter}| orderBy: sortByOption track by $index'>
+			<div class="outPanel"> 
+				<div class="arrow-right "></div>
+				<div class="outPanel_left">
+					<div class="panelNumber">{{$index +1}}.</div>
+				</div>
+				<div class="outPanel_right">
+
+					<div class="outPanelType" ng-click = "searchProjects(webProject.type)">[{{webProject.type}}]</div>
+					<div class="outPanelBy"><i class="fa fa-user"></i> &nbsp{{webProject.admins[0].basicInfo.firstName}} {{webProject.admins[0].basicInfo.lastName}}</div>
+				</div>
+				
+			</div>
+			<div class="projectPanel">
+				<div class="panel_subTypeSquare {{webProject.subType}} ">
+					<div class="panel_applicants">
+						{{webProject.members.length}}&nbsp;<i class="fa fa-user-plus"></i>
+					</div>
+					{{webProject.subType}}
+				</div>
+				<div class="panel_mainContent">
+					<div class="panel_mainContent_left">
+							<div class="panel_MC_left_upper">{{webProject.name}}</div>
+							<div class="panel_MC_left_lower">
+								<div class="panel_tags">
+									<div class="panel_tag" ng-repeat="tag in webProject.tags"  ng-click="searchProjects(tag)">{{tag}}</div>
+								</div>
+								<div class="panel_createdBy">{{webProject.description}}</div>
+								<!--<div class="panel_createdOn"><i class="fa fa-calendar-o"></i> {{webProject.createdAt | date:' MMM dd'}}</div>-->
+							</div>
+						</div>
+					<div class="panel_mainContent_right">
+						<!--<div class="panel_location"><i class="fa fa-map-marker fa-1x"></i></div>-->
+						
+						<apply-modal class = "panel_modal_button"width='700px' height='60%'>
+								<div class = 'panel-flex-contain-apply'>
+									<span class = 'panel_title web_title'>{{webProject.name}}</span>
+									<span class = 'panel_creator web_creator'>Created By: {{webProject.admins[0].basicInfo.firstName}} {{webProject.admins[0].basicInfo.lastName}}</span>
+									<span class = 'panel_date web_date'>{{webProject.createdAt | date: 'MMM dd'}}</span>
+								</div>
+							<hr>
+							<div class = 'message-apply-contain'>
+								<textarea class = 'apply-message' placeholder = 'Send {{webProject.admins[0].basicInfo.firstName}} a message letting them know why you would be a good fit for their project.'></textarea>
+							</div>
+							<div class ='submit-contain'>
+								<button class="panel_btn submit" ng-click="apply(webProject._id, submittedMessage)" >Submit</button>
+							</div>
+						
+					</apply-modal>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+</div>
+

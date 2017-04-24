@@ -1,0 +1,151 @@
+
+
+.header{
+	display:flex;	
+	/*height:200px;*/
+	width:100%;
+	background:#e1e3e4;
+	flex-direction: column;
+
+}
+.home_headerTop{
+	display: flex;
+	align-self: flex-start;
+	height:50px;
+	background: #F4F4F4;
+	width: 100%;
+	line-height: 51px;
+	border-bottom: 1px solid #d2d6d5;
+	color: #a6abab;
+	font-family: 'Intro';
+	font-weight: 100;
+	justify-content: space-between
+}
+.home_slogan{
+	margin-left:30px;
+}
+
+.home_devvitLogo{
+	font-family: 'Intro';
+	color: #093561;
+	font-size:1.5em;
+	flex:1;
+	margin-left:50px;
+	margin-top:5px;
+
+}
+
+.home_loginreg {
+	color: #336699;
+	margin-right:30px;
+}
+
+.home_header2{
+	display:flex;
+	width:100%;
+	flex-direction: row;
+	justify-content: space-between;
+	border-bottom: 1px solid #d2d6d5;
+}
+.nav{
+	flex:5;
+	height:30px;
+}
+.nav > ul{
+	display:flex;
+	flex-direction: row;
+	font-family: dosis;
+	justify-content: flex-end;
+	height:30px;
+	line-height: 31px;
+
+}
+.navButtons {
+	padding-left:20px;
+	padding-right:20px;
+	font-size:1.5em;
+	color: #343434;
+	border-left: 2px solid #f4f4f4;
+	vertical-align:middle;
+	height:30px;
+	/*padding:5px 15px;*/
+}
+
+.groupsNavButton{
+	position:relative;
+}
+.groupsSubMenu{
+	z-index:99;
+	background:#343434;
+	color:white;
+	position:absolute;
+	width:100%;
+}
+.subMenu{
+	cursor:pointer;
+	margin-left:5px;
+
+}
+.arrow-up {
+	position:absolute;
+	top:-8px;
+	left:2px;
+	width: 0; 
+	height: 0; 
+	border-left: 9px solid transparent;
+	border-right: 9px solid transparent;
+	border-bottom: 9px solid #343434;
+}
+.subMenu:hover{
+	color:#336699;
+}
+
+.nav> ul >a:hover {
+	background: #f4f4f4;
+}
+.username{
+	color:#336699;
+	font-size: 19px;
+}
+.activeNavTab{
+	color: #336699;
+}
+
+.submitNavButt{
+	background: #343434;
+	color: #ff9326
+	/*color: #e84d3d;*/
+}
+
+.fa-search{
+	color: #e84d3d
+}
+.home_searchTab{
+	width:100%;
+	height:70px;
+	background: #343434;
+	color:#f4f4f4;
+	text-align: center;
+	font-size:40px;
+}
+.home_searchTab > input{
+	font-size:40px;
+	border: none;
+	border-bottom:2px solid #f4f4f4;
+	margin-bottom:5px;
+}
+.home_searchBar{
+	border-bottom: #f4f4f4;
+	background:transparent;
+	width:30%;
+	height:90%;
+	color: #f4f4f4;
+	font-family:dosis;
+	
+}
+
+/*#scroller {
+	    position: fixed;
+		top:0;
+
+}*/

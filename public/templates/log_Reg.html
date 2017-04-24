@@ -1,0 +1,32 @@
+<div class="log_RegPage">
+
+        <div class="loginContainer">
+
+        Username:    <input type="text" value="" ng-model="user.loginUsername">
+        Password:    <input type="password" value="" ng-model="user.loginPassword">
+                     <input class="log_RegButton" type="button" value="Login" ng-click="login(user)">
+
+        </div>
+        <div class="registerContainer">
+          <h2 id="register">Register </h2>
+              <div class="registerContainerWithButton">
+
+                <div class="registerContentContainer">
+                    <div class="log_RegfirstColumn">
+                        <div class="log_RegfirstName">First:<input type="text" tabindex=1 value="" ng-model="user.firstname"></div>
+                        <div class="log_Regusername">Username:  <input type="text" tabindex=3 value="" ng-model="user.username">{{}}</div>
+                        <div class="log_Regpassword">Password:  <input type="password" tabindex=5 value="" ng-model="user.password"></div>
+                    </div>
+                    <div class="log_RegsecondColumn">
+                        <div class="log_ReglastName">Last: <input type="text" tabindex=2 value="" ng-model="user.lastname"> </div>
+                        <div class="log_Regemail">Email:  <input type="text" tabindex=4 value="" ng-model="user.email"></div>
+                        <div class="log_RegverifyPassword">Verify Password:  <input type="password" tabindex=6 value="" ng-model="user.verifyPassword"></div>
+                    </div>
+                </div>
+                    <div class="log_RegsubmitButton">
+                        <input class="log_RegButton" type="button" tabindex=1 value="submit" ng-click="createNewUser(user)">
+                    </div>
+              </div>
+
+        </div>
+</div>

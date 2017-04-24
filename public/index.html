@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html ng-app='devvit'>
+<head>
+	<title>Devvit</title>
+
+</head>
+	<link rel="stylesheet" href="styles/reset.css">
+	<link rel="stylesheet" href="styles/homeView.css">
+	<link rel="stylesheet" href="styles/style.css">
+	<link rel="stylesheet" href="styles/profileView.css">
+	<link rel="stylesheet" href="styles/log_Reg.css">
+	<link rel="stylesheet" href="styles/messages.css">
+	<link rel="stylesheet" href="styles/groups.css">
+	<link rel="stylesheet" href="styles/create.css">
+	<link rel="stylesheet" href="styles/landing.css">
+	<link rel="stylesheet" href="styles/developers.css">
+	
+	
+	
+	<link rel="stylesheet" href="styles/fonts/Intro.ttf.eot">
+    <link href='https://fonts.googleapis.com/css?family=Cinzel|Lato' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Dosis:200' rel='stylesheet' type='text/css'>
+
+<body>
+
+<div ng-controller='pseudoCtrl'>
+</div>
+
+
+
+<ui-view></ui-view>
+
+<footer>
+	
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/angular-moment/0.9.0/angular-moment.min.js"></script>   
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>  
+
+
+<script src="/js/app.js"></script>
+<script src="/js/directives/collapsediv.js"></script>
+<script src="/js/directives/applymodal.js"></script>
+
+
+
+
+<!--        Controllers         -->
+<script src="js/main/controllers/homeCtrl.js"></script>
+<script src="js/main/controllers/developersCtrl.js"></script>
+<script src="js/profile/controllers/groupDisplayAdminCtrl.js"></script>
+<script src="js/main/controllers/webViewCtrl.js"></script>
+<script src="js/main/controllers/mobileViewCtrl.js"></script>
+<script src="js/profile/controllers/createCtrl.js"></script>
+<script src="js/profile/controllers/groupDisplayCtrl.js"></script>
+<script src="js/profile/controllers/profileCtrl.js"></script>
+<script src="js/profile/controllers/basicInfoCtrl.js"></script>
+<script src="js/profile/controllers/pendingCtrl.js"></script>
+<script src="js/profile/controllers/activeCtrl.js"></script>
+<script src="js/profile/controllers/groupsCtrl.js"></script>
+<script src="js/profile/controllers/messageCtrl.js"></script>
+<script src="js/profile/controllers/messageCurrentCtrl.js"></script>
+<script src="js/profile/controllers/messageSearchCtrl.js"></script>
+<script src="js/main/controllers/homeCtrl.js"></script>
+<script src="/js/login/controllers/log_RegCtrl.js"></script>
+<script src="js/profile/controllers/pseudoUserCtrl.js"></script>
+<script src="js/profile/controllers/profileViewCtrl.js"></script>
+
+
+
+
+
+<!--        Services         -->
+
+ <!--<script src="/js/login/controllers/log_RegCtrl.js"></script>-->
+
+
+<!--        Services         -->
+<script src="/js/profile/services/profileService.js"></script>
+<script src="js/profile/services/basicInfoService.js"></script>
+<script src="js/profile/services/createService.js"></script>
+<script src="/js/profile/services/pendingService.js"></script>
+<script src="/js/profile/services/activeService.js"></script>
+<script src="/js/profile/services/groupsService.js"></script>
+<script src="/js/profile/services/messageService.js"></script>
+<script src="/js/main/services/homeService.js"></script>
+<script src="/js/main/services/devService.js"></script>
+
+<script src="/js/main/services/projectService.js"></script>
+<script src="/js/login/services/log_RegService.js"></script>
+
+
+</body>
+</html>

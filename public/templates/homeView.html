@@ -1,0 +1,46 @@
+<div class="header">
+	
+<div class="home_headerTop">
+	<div class= "home_slogan">
+	by developers. for developers.
+	</div>
+
+	<div class="home_loginreg">
+		not a member?
+		<a class = 'loginRegButton' ui-sref="profile.login-register">register/</a>
+		<a class = 'loginRegButton' href="">login</a>
+		<!--<a ui-sref="profile" class="username">Username</a>&nbsp&nbsp 
+		<a  class="username">login/register</a>-->
+	</div>
+	
+</div>
+
+<div class="home_header2" >
+	<!--<div class="home_devvitLogo">DEVVIT.</div>-->
+	<div class="nav">
+		<ul>
+			<a ui-sref="devvit.profile"><li class = "navButtons" ng-class="{activeNavTab: isActive('/home/profile')}">HOME</li></a>
+			<a ui-sref="devvit.web"><li class = "navButtons" class = 'webButton'ng-class="{activeNavTab: isActive('/home/web')}">PROJECTS</li></a>
+			<div class="groupsNavButton">
+			<a ><li class = "navButtons" ng-click = "slideInGroups()" ng-class="{activeNavTab: isActive('/home/groups')} ">GROUPS</li></a>
+			<div class="groupsSubMenu" id="groupSubMenu">
+				<div class="arrow-up"></div>
+				<div class="subMenu Active_nav" ui-sref="devvit.active" ng-click = "slideInGroups()">ACTIVE POSTS</div>
+				<div class="subMenu groups_subnav" ui-sref="devvit.groups" ng-click = "slideInGroups()">MY GROUPS</div>
+			</div>
+			</div>
+			<a ui-sref="devvit.developers"><li class = "navButtons" ng-class="{activeNavTab: isActive('/home/developers')}">DEVELOPERS</li></a>
+			<a ui-sref="devvit.messages"><li class = "navButtons"  ng-class="{activeNavTab: isActive('/home/messages')}">MESSAGES</li></a>			
+			<a ui-sref='devvit.createProject'><li class = "navButtons submitNavButt">SUBMIT YOUR IDEA</li></a>
+			<!--<a href=""><li class = "navButtons searchButton" ng-click = "slideInSearch()"><i class="fa fa-search"></i></li></a>-->
+			
+			
+		</ul>
+	</div>
+</div>
+	
+</div>
+<!--<div id="slideInOut" class="home_searchTab">
+	<input type="text"  class = "home_searchBar">
+</div>-->
+<ui-view></ui-view>

@@ -1,0 +1,23 @@
+<div class="developerBody">
+	<div class="searchDevelopers" >
+		Find your next coding buddy: <br>
+		<input ng-model="developerSearch"  type="text" id = "search"  placeholder="STEVE WOZ">
+	</div>
+	<div class="developerMain">
+		<div class="users" >
+			
+			<div class="main_developerCard" ng-repeat = "user in members">
+				<div class="developerCard_upper"></div>
+				<div class="developerCard_lower">
+					{{user.basicInfo.first}}
+					{{user.basicInfo.last}}
+					<br>
+					{{user.basicInfo.userName}}
+					
+					
+					</div>
+			</div>
+			
+		</div>
+	</div>
+</div>

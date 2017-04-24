@@ -1,0 +1,36 @@
+<div class="profile_body">
+	<div class="profile_body_left">
+		<div class="profile_picture"></div>
+		<div class="profile_basicInfo">
+			<div class="profile_name">{{profile.basicInfo.firstName}}&nbsp{{profile.basicInfo.lastName}}</div>
+			<div class="profile_messages"> 0 <i class="fa fa-envelope"></i></div>
+			<div class="profile_location">location</div>
+			<div class="profile_email">{{profile.basicInfo.email}}</div>
+			<div class="profile_linkedin">{{profile.basicInfo.linkedin}}</div>
+			<div class="profile_github">{{profile.basicInfo.github}}</div>
+		</div>
+	</div>
+	
+	<div class="profile_body_right">
+		<div class="profile_userProjects">
+			<div class="profile_pending">
+				PENDING 
+				<div class="profile_pendingReq" ng-repeat="pending in profile.pendingApprovals">
+					{{pending}}
+				</div>
+			</div>
+			<div class="profile_pastGroups">
+				SKILLS
+			</div>
+		</div>
+		<div class="profile_otherUserInfo">
+			<div class="profile_bio">
+				BIO
+				<div class="profile_bio_bio"></div>
+			</div>
+			<div class="profile_right_location">
+				LOCATION
+			</div>
+		</div>
+	</div>
+</div>

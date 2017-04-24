@@ -1,0 +1,51 @@
+<!--<div class = 'cont'>
+	<div class = 'active-container' ng-repeat = 'groups in activePosts'>
+		<div class = 'active-panel panel'>
+			<button class="btn deletebtn right" ng-click = 'removeProject(groups._id)' type="button">Delete Post</button>
+			<button class="btn editbtn right" type="button" ng-show = '!save' ng-click='toggleView()'>Edit Post</button>
+			<button class="btn savebtn right" type="button" ng-show = 'save' ng-click="toggleView(); updatePosts(groups._id, groups.name, groups.description)">Save</button><br>
+			<form class = 'update-project' ng-show = 'save'>
+				<span>Title:<input type = 'text' name = 'title' ng-model = 'groups.name' ></span><br>
+				<span>Description:<input type = 'text' name = 'description' ng-model = 'groups.description' ></span>
+			</form>
+			<div class = 'activeproject-contain' ng-show = '!save'>
+			<span class = 'active-name panel-name'>{{groups.name}}</span>
+			<p class = 'active-description panel-description'>{{groups.description}}</p>
+			<span class = 'active-created panel-created'>{{groups.createdAt | date: 'short'}}</span>
+			</div>
+		</div>
+	</div>
+</div>-->
+
+
+<div class = 'cont'>
+	<div class = 'message-contain' ng-show = 'noActive'>
+	<span class = 'noactive'>{{activePosts.message}}</span>
+		</div>
+	<div class = 'active-container' ng-show = '!noActive' ng-repeat = 'groups in activePosts'>
+		<div class = 'profile_active-panel panel'>
+			<div class = 'profile_active-flex-contain'>
+			<span class = 'profile_title active-title' ng-show = '!save'>{{groups.name}}</span>
+			<span ng-show = 'save'>Title:<input type = 'text' ng-model = 'groups.name'></span>
+			<span class = 'profile_date active-date'>Created on: {{groups.createdAt | date:' MMM dd'}}</span>
+			<div class = 'profile_btn-contain'>
+			<button class="profile_btn editbtn" type="button" ng-show = '!save' ng-click='toggleView()'>Edit Post</button>
+			<button class="profile_btn savebtn" type="button" ng-show = 'save' ng-click="toggleView(); updatePosts(groups._id, groups.name, groups.description)">Save</button>
+			<button class="profile_btn deletebtn" ng-click = 'removeProject(groups._id)' type="button">Delete Post</button>
+			</div>
+			</div>
+			<div class = 'contain2'>
+			<p class = 'profile_description active-description' dd-text-collapse dd-text-collapse-max-length="110" dd-text-collapse-text="{{groups.description}}" ng-show = '!save'></p>
+			<span ng-show = 'save' >Description:<br><textarea class = 'edit-desc' ng-model = 'groups.description'></textarea>
+			</div>
+			<div class = 'contain3'>
+				<span class = 'type'>{{groups.type}}
+			
+	</div>
+</div>
+</div>
+
+
+<!--<button class="btn deletebtn right" ng-click = 'removeProject(groups._id)' type="button">Delete Post</button>
+<button class="btn editbtn right" type="button" ng-show = '!save' ng-click='toggleView()'>Edit Post</button>
+<button class="btn savebtn right" type="button" ng-show = 'save' ng-click="toggleView(); updatePosts(groups._id, groups.name, groups.description)">Save</button><br>-->

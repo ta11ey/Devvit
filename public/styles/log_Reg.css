@@ -1,0 +1,78 @@
+#register {
+  text-align: center;
+padding: 20px;
+text-decoration: underline;
+font-size: 21px;
+text-underline-color: black;
+
+}
+
+.log_RegPage{
+  height: 300px;}
+
+.loginContainer{
+  float: right;
+margin: 10px;
+margin-right: 20px;
+}
+
+.registerContainer{width: 50%;
+align-self: center;
+height: 100%;
+}
+
+.registerContainerWithButton{}
+
+.registerContentContainer{
+display: flex;
+
+/* justify-content: center; */
+margin: 15px;
+height: 80%;}
+
+.log_RegfirstColumn{
+	margin: 0 auto;
+align-self: center;}
+
+.log_RegfirstName{
+	margin-left: 39px;}
+
+.log_Regusername{
+	margin: 20px 0px;
+
+}
+
+.log_Regpassword{
+	margin-left: 3px;
+}
+
+.log_RegsecondColumn{
+	margin: 0 auto;
+align-self: center;}
+
+.log_ReglastName{
+	margin-left: 77px;}
+
+.log_Regemail{
+	margin: 20px 0px;
+margin-left: 67px;}
+
+.log_RegverifyPassword{
+
+}
+
+.log_RegsubmitButton{
+  display: flex;
+  justify-content: center;
+  margin: 40px;
+}
+
+.log_RegButton{
+border-width: 1.5px;
+background-color: #E4E4E4;
+width: 75px;
+border-radius: 7px;
+border-bottom-color: lightgray;
+border-top-color: black;
+border-left-color: black;
+}

@@ -1,0 +1,62 @@
+<div class="header">
+	
+<div class="home_headerTop">
+	<div class= "home_slogan">
+	by YOU. for YOU.
+	</div>
+
+	<div class="home_loginreg">
+
+	
+
+	{{profile.username}}
+
+		<!--<a ui-sref="profile" class="username">Username</a>&nbsp&nbsp 
+		<a  class="username">login/register</a>-->
+	</div>
+	
+</div>
+
+<div class="home_header2">
+	<div class="home_devvitLogo">developer</div>
+	<div class="nav">
+		<ul>
+			<a ui-sref="devvit.web"><li class = "navButtons">HOME</li></a>
+			<a  ui-sref="profile.active"><li class = "navButtons"  ng-class="{activeNavTab: isActive('/profile/active/')}">ACTIVE</li></a>
+			<a ui-sref="profile.pending"><li class = "navButtons" ng-class="{activeNavTab: isActive('/profile/pending/')}">PENDING</li></a>
+			<a ui-sref="profile.groups"><li class = "navButtons" ng-class="{activeNavTab: isActive('/profile/groups/')}">GROUPS</li></a>
+			<a ui-sref="devvit.messages"><li class = "navButtons" ng-class="{activeNavTab: isActive('/profile/messages/')}">MESSAGES</li></a>
+			<a ui-sref='devvit.createProject'><li class = "navButtons" ng-class="{activeNavTab: isActive('/profile/createProject/')}">SUBMIT</li></a>
+			<!--<li class = "navButtons searchButton" ng-click = "slideInSearch()"><a href=""><i class="fa fa-search"></i></a></li>-->
+			
+			
+		</ul>
+	</div>
+</div>
+
+<div class="profile_body">
+<ui-view></ui-view>
+</div>
+<!--<header>
+	<nav>
+		<a ui-sref="profile.about"><div ng-class="{activeNavTab: isActive('/profile/about/')}" class="navTab aboutTab">PROFILE</div></a>
+		<a ui-sref="profile.active"><div ng-class="{activeNavTab: isActive('/profile/active/')}" class = "navTab activeTab">ACTIVE</div></a>
+		<a ui-sref="profile.pending"><div ng-class="{activeNavTab: isActive('/profile/pending/')}" class = "navTab pendingTab">PENDING </div></a>
+		<a ui-sref="profile.groups"><div ng-class="{activeNavTab: isActive('/profile/groups/')}" class = "navTab groupsTab">GROUPS</div></a>
+		<a ui-sref="profile.messages"><div ng-class="{activeNavTab: isActive('/profile/messages/')}" class = "navTab messagesTab">MESSAGES</div></a>
+
+	</nav>
+	<div class="profileDirective">
+		<a ui-sref="profile" class="username">{{profile.username}}</a>
+	</div>
+		
+	<a ui-sref='profile.createProject'>
+		<div class="createPostButton">
+		+ <br> Project
+	</div></a>
+</header>
+<div class="profileBody">
+	<div class="profileContentView">
+		<ui-view></ui-view>
+	</div>
+</div>-->

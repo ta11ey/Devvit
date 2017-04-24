@@ -1,0 +1,44 @@
+<a ui-sref = "devvit.groups"><u> < back to groups</u></a>
+<div class="theGroupDisplay">
+	<div class="theGroupHeader">{{group.name}}</div>
+	<div class="theGroupBody">
+		
+		<div class="theGroupInfo">
+			<div class="groupInfoTop">
+				
+				<div class="groupInfo">
+					<div class="groupType">category:{{group.type}}</div>
+					<div class="groupSubType">type:{{group.subType}}</div>
+					<div class="groupCreatedAt">created:{{group.createdAt}}</div>
+					<div class="groupCreatedBy">by:{{group.createdBy}}</div>
+				</div>
+				<div class="groupDescription">{{group.description}}</div>
+			</div>
+			<div class="groupInfoMessage">
+				<div class="groupInfoMessageDiv" ng-repeat = "message in groupMessages track by $index">
+					<div class="groupInfoMessagemess">{{message.message}}</div>
+					<div class="groupInfoMessageUser">
+						{{message.sentBy.basicInfo.firstName}}
+						{{message.sentBy.basicInfo.lastName}}
+						</div>		
+				</div>
+
+				<input type="text"ng-model="groupmessagecontent"><button ng-click="sendGroupMessage(groupmessagecontent)">send</button>
+			</div>
+		</div>
+		
+		<div class="theGroupMembers">
+			<div class="membersAdmins">
+				<div class="groupAdminsRepeat"ng-repeat = "admin in group.admins">
+				<div class="groupAdminUser">{{admin.basicInfo.firstName}} {{admin.basicInfo.lastName}}</div>
+					
+				</div>
+			</div>
+			<div class="membersMembers">
+				<div class="groupMembersRepeat"ng-repeat = "member in group.members">
+					<div class="groupMemberUser">{{member.member.basicInfo.firstName}} {{member.member.basicInfo.lastName}}</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

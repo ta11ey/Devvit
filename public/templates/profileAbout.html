@@ -1,0 +1,40 @@
+ <!--<div class = 'about-wrapper'>
+ <section>
+ 	<button class="editorBtn" type="button" ng-click="toggleView()" ng-show = '!save'>Edit Profile</button>
+ 	<button class="editorBtn" type="button" ng-show = 'save' ng-click="toggleView(); updateProfile()">Save</button><br>
+	 <form class = 'update-user' ng-show = 'save'>
+		 <fieldset>
+			 <legend>Basic Info:</legend>
+			<span class = 'profile-title'>First Name:<input type = 'text' name = 'firstname'   placeholder = '{{first}}' ng-model = 'firstName' ></span><br>
+			<br>
+			<span class = 'profile-title'>Last Name:<input type = 'text' name = 'description'   placeholder = '{{last}}' ></span><br>
+			<br>
+			<span class = 'profile-title'>Username:<input type = 'text' name = 'description'   placeholder = '{{userName}}' ></span><br>
+			<br>
+			<span class = 'profile-title'>Email:<input type = 'text' name = 'description'   placeholder = '{{email}}' ></span><br>
+			<br>
+			<span class = 'profile-title'>Password:<input type = 'text' name = 'description'   placeholder = '{{password}}' ></span><br>
+		 </fieldset>
+	</form>
+   	<div class = 'activeuser-contain' ng-show = '!save'>
+		   <div class = 'profile-title'>First Name: </div><span>{{first}}</span><br>
+			<div class = 'profile-title'>Last Name: </div><span>{{last}}</span><br>
+			<div class = 'profile-title'>Username: </div><span>{{userName}}</span><br>
+			<div class = 'profile-title'>Email: </div><span>{{email}}</span><br>
+			<div class = 'profile-title'>Password: </div><span>{{password}}</span><br>
+			</div>
+	</div>
+ </div>-->
+
+
+ <div class = 'about-wrapper'>
+ <section>
+ 	<button class="editorBtn" type="button" ng-click="toggleEditMode(); toggleView()" ng-show = '!save'>Edit Profile</button>
+ 	<button class="editorBtn" type="button" ng-show = 'save' ng-click="toggleEditMode(); toggleView(); updateProfile()" >Save</button><br>
+    <div class = 'profile-title'>First Name:</div> <div class="editor" ng-model="first" ng-attr-contenteditable="{{ editmode }}">
+    </div>
+    <div class = 'profile-title'>Last Name:</div> <div class ="editor" ng-model="last" ng-attr-contenteditable="{{ editmode }}"></div><br>
+	<div class = 'profile-title'>Email:</div> <div class ="editor" ng-model="email" ng-attr-contenteditable="{{ editmode }}"></div><br>
+	<div class = 'profile-title'>Password:</div> <div class = "editor" ng-model="password" ng-attr-contenteditable="{{ editmode }}"></div><br>
+  </section>
+ </div>

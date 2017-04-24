@@ -1,0 +1,18 @@
+<!--<div class="prof_group_aside">
+	<div ng-click="getGroupswithInfo($index)" class="prof_aside_messages" ng-repeat = "group in groups">
+		<a ui-sref="profile.groups.group">
+			<div>{{group.name}}</div>
+		</a>
+	</div>
+</div>
+<div class="prof_group_body">
+	<ui-view></ui-view>
+</div>-->
+
+<div class="chooseGroup">
+	<div class="groupsHeader">Groups</div>
+	<div class="group_groupsBody">
+			<div class="groups_eachGroup"  ng-repeat = "group in groups track by $index" ng-click = "goToGroup(group)">{{group.name}}</div>
+	</div>
+
+</div>

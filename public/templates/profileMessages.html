@@ -1,0 +1,20 @@
+<div class="messages_wrap">
+	<div class="messages_wrap_content">
+		<div class="prof_mess_aside">
+			<!--<button class="findUser" ng-click="searchValue = true" ui-sref="devvit.messages.newmessage">Compose</button>-->
+			<div class="iconWrap" ng-click="searchValue = true" ui-sref="devvit.messages.newmessage"><i id="composeIcon" class="fa fa-pencil-square-o"></i>Compose</div>
+			<div ng-click="getMessageswithUser($index); selectedNameCheck($index); getCurrentIndex($index)" class="prof_aside_messages" ng-repeat="user in userMessages">
+				<div ng-class="{firstDiv:$first}" ng-click="newLocation(user.withUser._id)">
+					<span class="message_name" ng-class="{'message_name_current': $index == selectedName}">
+					{{user.withUser.basicInfo.firstName}} {{user.withUser.basicInfo.lastName}}</span>
+					<p id="previewMessage">{{user.preview.message | limitTo: 43 }}{{user.preview.message.length > 43 ? '...' : ''}}</p>
+					<!--<br>-->
+				</div>
+			</div>
+			
+		</div>
+		<div class="prof_mess_body">
+			<ui-view></ui-view>
+		</div>
+	</div>
+</div>
